@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="simple pug template")
+        meta(name="author", content="latiosthinh")
+
+        title Home 
+        //- bootstrap
+        link(rel="stylesheet", href="css/bootstrap.min.css")
+        //- font
+        link(rel="stylesheet", href="fonts/font-awesome/css/font-awesome.min.css")
+        link(rel="stylesheet", href="fonts/elegantIcon/elegantIcon.css")
+    
+        link(rel="stylesheet", href="css/main.css")
+
+        //- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+        //- WARNING: Respond.js doesn't work if you view the page via file://
+        //- [if lt IE 9]>
+        //-     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        //-     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        //- <![endif]
+    body
+        header
+            nav.d-nav: ul
+                li: a.smooth(href="#", title="") Menu 1
+                li
+                    a.smooth(href="#", title="") Menu 2
+                    ul
+                        li: a.smooth(href="#") Menu 1.1
+
+            button.open-mnav MENU OPEN
+        
+        .ac
+
+        input.hidden(multiple, type="file", name="", accept="image/x-png,image/gif,image/jpeg")
+        .result(style="max-width:600px")
+
+        //- youtube play
+        .yt-box(data-url="https://www.youtube.com/watch?v=auHnlXFV3Pk")
+            img.play(src="https://dantricdn.com/thumb_w/640/2018/embe1-1515732302477.jpg", alt="", title="")
+
+        //- scroll psy
+        ul.psy-pane
+            each val, i in ['psy menu 1', 'psy menu 2', 'psy menu 3',]
+                li: a.smooth.psy-btn(href="#id" + (i+1))= val
+        
+        section.psy-section#id1 section 1
+        section.psy-section#id2 section 2
+        section.psy-section#id3 section 3
+
+        //- toggle
+        a.smooth(href="#", title="", data-show="#toggle-id") Click here
+        #toggle-id(style="display:none")
+
+        //- accordion
+        ul.acc
+            li: a.smooth(href="#") dm1
+            li
+                a.smooth(href="#") dm2
+                ul(style="display:none")
+                    li: a.smooth(href="#") dm 1.1
+                    li: a.smooth(href="#") dm 1.2
+                    li: a.smooth(href="#") dm 1.3
+            li: a.smooth(href="#") dm3
+        //- style drop button.acd-drop
+
+        .fb-root
+        
+        script(src="js/jquery.js")
+        script(src="js/gsap.min.js")
+        script(src="js/scrollMagic.min.js")
+        script(src="js/scrollMagicIndicators.min.js")
+        script(src="js/bootstrap.min.js")
+        script(src="js/script.js")
+        script.
+            $('.d-nav').hc_menu({
+               open: '.open-mnav',
+            });
+
+            $('.ac').hc_countdown({
+                date: '08/28/2018 8:00:00',
+            });
+
+            $('input').hc_upload({
+                multiple: true,
+                result: '.result',
+            });
+
+            $('.acc').hc_accordion();
+
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+        
+

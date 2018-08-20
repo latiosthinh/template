@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="simple pug template"/>
+    <meta name="author" content="latiosthinh"/>
+    <title>Home </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="fonts/elegantIcon/elegantIcon.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body>
+    <header>
+      <nav class="d-nav">
+        <ul>
+          <li><a class="smooth" href="#" title="">Menu 1</a></li>
+          <li><a class="smooth" href="#" title="">Menu 2</a>
+            <ul>
+              <li><a class="smooth" href="#">Menu 1.1</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <button class="open-mnav">MENU OPEN</button>
+    </header>
+    <div class="ac"></div>
+    <input class="hidden" multiple="multiple" type="file" name="" accept="image/x-png,image/gif,image/jpeg"/>
+    <div class="result" style="max-width:600px"></div>
+    <div class="yt-box" data-url="https://www.youtube.com/watch?v=auHnlXFV3Pk"><img class="play" src="https://dantricdn.com/thumb_w/640/2018/embe1-1515732302477.jpg" alt="" title=""/></div>
+    <ul class="psy-pane">
+      <li><a class="smooth psy-btn" href="#id1">psy menu 1</a></li>
+      <li><a class="smooth psy-btn" href="#id2">psy menu 2</a></li>
+      <li><a class="smooth psy-btn" href="#id3">psy menu 3</a></li>
+    </ul>
+    <section class="psy-section" id="id1">section 1</section>
+    <section class="psy-section" id="id2">section 2</section>
+    <section class="psy-section" id="id3">section 3</section><a class="smooth" href="#" title="" data-show="#toggle-id">Click here</a>
+    <div id="toggle-id" style="display:none"></div>
+    <ul class="acc">
+      <li><a class="smooth" href="#">dm1</a></li>
+      <li><a class="smooth" href="#">dm2</a>
+        <ul style="display:none">
+          <li><a class="smooth" href="#">dm 1.1</a></li>
+          <li><a class="smooth" href="#">dm 1.2</a></li>
+          <li><a class="smooth" href="#">dm 1.3</a></li>
+        </ul>
+      </li>
+      <li><a class="smooth" href="#">dm3</a></li>
+    </ul>
+    <div class="fb-root"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/scrollMagic.min.js"></script>
+    <script src="js/scrollMagicIndicators.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      $('.d-nav').hc_menu({
+         open: '.open-mnav',
+      });
+      
+      $('.ac').hc_countdown({
+          date: '08/28/2018 8:00:00',
+      });
+      
+      $('input').hc_upload({
+          multiple: true,
+          result: '.result',
+      });
+      
+      $('.acc').hc_accordion();
+      
+      (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6";
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+body{
+	font-size: 14px;
+	font-family: $f1;
+	line-height: 1.5;
+	color: $color_text;
+}
+ 
+#toTop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+.yt-box{ @extend %yt-box }

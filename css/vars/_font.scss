@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+	font-weight: bold;
+}
+
+$font-family-base: 'Roboto', sans-serif;
+$font-family-base2: 'OpenSans', sans-serif;
+// ..........
+$f1: font-family-base;
+$f2: font-family-base2;
+
+$f3: 'Arial';
